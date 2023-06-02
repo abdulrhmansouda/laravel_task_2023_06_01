@@ -18,8 +18,8 @@ class OrderDetailFactory extends Factory
     public function definition(): array
     {
         return [
-            'purchase_price'    => fake()->randomFloat(8,0.01,999999.99),
-            'amount'            => fake()->numberBetween(1,999),
+            'purchase_price'    => fake()->randomFloat(2,0.01,9.99),
+            'amount'            => fake()->numberBetween(1,5),
             'item_id'           => Item::inRandomOrder()->first()->id,
         ];
     }
